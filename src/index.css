@@ -1,0 +1,37 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* Mercedes-Benz Fonts */
+@font-face {
+  font-family: 'MBCorpoSText';
+  src: url('/fonts/MBCorpoSText-Regular-Web.woff2') format('woff2'),
+       url('/fonts/MBCorpoSText-Regular-Web.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'MBCorpoSText';
+  src: url('/fonts/MBCorpoSText-Bold-Web.woff2') format('woff2'),
+       url('/fonts/MBCorpoSText-Bold-Web.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'MBCorpoATitleCond';
+  src: url('/fonts/MBCorpoATitleCond-Regular-Web.woff2') format('woff2'),
+       url('/fonts/MBCorpoATitleCond-Regular-Web.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Global heading styles */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'MBCorpoATitleCond', system-ui, sans-serif;
+  letter-spacing: 0;
+}
