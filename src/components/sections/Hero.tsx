@@ -1,9 +1,13 @@
 import React from 'react';
+import { useState } from 'react';
 import { ArrowRight, Globe, Zap, Target, BarChart3 } from 'lucide-react';
 import Button from '@components/ui/Button/Button';
 import Card from '@components/ui/Card/Card';
+import VideoModal from '@components/ui/VideoModal/VideoModal';
 
 const Hero: React.FC = () => {
+  const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
+
   const features = [
     {
       icon: Globe,
@@ -26,6 +30,14 @@ const Hero: React.FC = () => {
       description: 'Real-time insights and performance optimization'
     }
   ];
+
+  const handleViewDemo = () => {
+    setIsVideoModalOpen(true);
+  };
+
+  const handleCloseVideoModal = () => {
+    setIsVideoModalOpen(false);
+  };
 
   return (
     <div className="relative">
@@ -64,7 +76,7 @@ const Hero: React.FC = () => {
               <span className="font-medium tracking-wide">Explore Platform</span>
               <ArrowRight size={20} className="transform group-hover:translate-x-1 transition-transform" />
             </Button>
-            <Button variant="outline">
+            <Button variant="outline" onClick={handleViewDemo}>
               <span className="font-medium tracking-wide">View Demo</span>
             </Button>
           </div>
@@ -119,6 +131,14 @@ const Hero: React.FC = () => {
           </div>
         </div>
       </section>
+      
+      {/* Video Demo Modal */}
+      <VideoModal
+        isOpen={isVideoModalOpen}
+        onClose={handleCloseVideoModal}
+        videoSrc="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+        title="Mercedes-Benz BrandOS Platform Demo"
+      />
     </div>
   );
 };
