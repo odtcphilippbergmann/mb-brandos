@@ -6,14 +6,14 @@ interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
 }
 
 const Input: React.FC<InputProps> = ({ label, error, className = '', ...props }) => {
-  const baseClasses = 'w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:border-white focus:ring-2 focus:ring-white focus:ring-opacity-20 focus:outline-none transition-colors';
+  const baseClasses = 'w-full bg-white border border-gray-300 rounded-lg px-4 py-3 text-gray-900 placeholder-gray-500 focus:border-gray-900 focus:ring-2 focus:ring-gray-900 focus:ring-opacity-20 focus:outline-none transition-colors';
   const errorClasses = error ? 'border-red-500' : '';
   const classes = `${baseClasses} ${errorClasses} ${className}`;
   
   return (
     <div className="space-y-2">
       {label && (
-        <label className="block text-sm font-medium text-gray-300" htmlFor={props.id}>
+        <label className="block text-sm font-medium text-gray-700" htmlFor={props.id}>
           {label}
         </label>
       )}

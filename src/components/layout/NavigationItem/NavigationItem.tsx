@@ -37,11 +37,11 @@ const NavigationItem: React.FC<NavigationItemProps> = ({
       onKeyDown={handleKeyDown}
       className={`
         w-full flex items-center space-x-3 px-6 py-3 text-left transition-all duration-200
-        hover:bg-gray-800 hover:border-r-2 hover:border-white
-        focus:bg-gray-800 focus:border-r-2 focus:border-white focus:outline-none
+        hover:bg-gray-100 hover:border-r-2 hover:border-gray-900
+        focus:bg-gray-100 focus:border-r-2 focus:border-gray-900 focus:outline-none
         ${isActive 
-          ? 'bg-gray-800 border-r-2 border-white text-white' 
-          : 'text-gray-400 hover:text-white'
+          ? 'bg-gray-100 border-r-2 border-gray-900 text-gray-900' 
+          : 'text-gray-600 hover:text-gray-900'
         }
       `}
       aria-current={isActive ? 'page' : undefined}

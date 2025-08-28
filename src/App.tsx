@@ -132,7 +132,7 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-black text-white" role="application">
+    <div className="min-h-screen bg-white text-gray-900" role="application">
       <SkipLinks onSkipToMain={handleSkipToMain} onSkipToNav={handleSkipToNav} />
       
       <Header 

@@ -40,22 +40,22 @@ const Hero: React.FC = () => {
           role="img"
           aria-label="Mercedes-Benz luxury vehicle in premium setting"
         >
-          <div className="absolute inset-0 bg-black bg-opacity-60"></div>
+          <div className="absolute inset-0 bg-white bg-opacity-60"></div>
         </div>
         
         {/* Content */}
-        <div className="relative z-10 text-center max-w-4xl mx-auto px-4">
+        <div className="relative z-10 text-center max-w-4xl mx-auto px-4 text-gray-900">
           <h1 className="text-5xl md:text-7xl font-extralight tracking-tight mb-6 leading-tight">
             One Brand.
             <br />
-            <span className="bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent">
               Every Channel.
             </span>
             <br />
             Seamlessly.
           </h1>
           
-          <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-xl md:text-2xl text-gray-700 mb-12 max-w-2xl mx-auto leading-relaxed">
             The integrated content platform that powers Mercedes-Benz marketing excellence across all touchpoints worldwide.
           </p>
           
@@ -72,13 +72,13 @@ const Hero: React.FC = () => {
       </section>
       
       {/* Features Grid */}
-      <section className="py-24 px-4 bg-gray-900">
+      <section className="py-24 px-4 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-light mb-6 tracking-wide">
+            <h2 className="text-3xl md:text-4xl font-light mb-6 tracking-wide text-gray-900">
               Luxury meets efficiency
             </h2>
-            <p className="text-gray-400 text-lg max-w-2xl mx-auto leading-relaxed">
+            <p className="text-gray-600 text-lg max-w-2xl mx-auto leading-relaxed">
               Every feature designed to maintain Mercedes-Benz's premium standards while maximizing global marketing impact.
             </p>
           </div>
@@ -88,11 +88,11 @@ const Hero: React.FC = () => {
               const Icon = feature.icon;
               return (
                 <Card key={index} className="text-center group" hover={true}>
-                  <div className="w-16 h-16 bg-white bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-opacity-20 transition-all duration-300">
-                    <Icon size={24} className="text-white" />
+                  <div className="w-16 h-16 bg-gray-900 bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-opacity-20 transition-all duration-300">
+                    <Icon size={24} className="text-gray-900" />
                   </div>
-                  <h3 className="text-xl font-medium mb-4">{feature.title}</h3>
-                  <p className="text-gray-400 leading-relaxed">{feature.description}</p>
+                  <h3 className="text-xl font-medium mb-4 text-gray-900">{feature.title}</h3>
+                  <p className="text-gray-600 leading-relaxed">{feature.description}</p>
                 </Card>
               );
             })}
@@ -101,20 +101,20 @@ const Hero: React.FC = () => {
       </section>
       
       {/* Stats Section */}
-      <section className="py-24 px-4 bg-black">
+      <section className="py-24 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-3 gap-8 text-center">
             <div>
-              <div className="text-4xl md:text-5xl font-extralight mb-4">40+</div>
-              <div className="text-gray-400 uppercase tracking-widest text-sm">Global Markets</div>
+              <div className="text-4xl md:text-5xl font-extralight mb-4 text-gray-900">40+</div>
+              <div className="text-gray-600 uppercase tracking-widest text-sm">Global Markets</div>
             </div>
             <div>
-              <div className="text-4xl md:text-5xl font-extralight mb-4">6M+</div>
-              <div className="text-gray-400 uppercase tracking-widest text-sm">Assets Managed</div>
+              <div className="text-4xl md:text-5xl font-extralight mb-4 text-gray-900">6M+</div>
+              <div className="text-gray-600 uppercase tracking-widest text-sm">Assets Managed</div>
             </div>
             <div>
-              <div className="text-4xl md:text-5xl font-extralight mb-4">180M+</div>
-              <div className="text-gray-400 uppercase tracking-widest text-sm">Campaign Reach</div>
+              <div className="text-4xl md:text-5xl font-extralight mb-4 text-gray-900">180M+</div>
+              <div className="text-gray-600 uppercase tracking-widest text-sm">Campaign Reach</div>
             </div>
           </div>
         </div>

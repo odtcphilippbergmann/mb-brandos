@@ -65,7 +65,7 @@ const Navigation: React.FC<NavigationProps> = ({
       {/* Mobile overlay */}
       {isMobileMenuOpen && (
         <div 
-          className="lg:hidden fixed inset-0 bg-black bg-opacity-50 z-40"
+          className="lg:hidden fixed inset-0 bg-gray-900 bg-opacity-50 z-40"
           onClick={() => setIsMobileMenuOpen(false)}
           aria-hidden="true"
         />
@@ -81,7 +81,7 @@ const Navigation: React.FC<NavigationProps> = ({
         }}
         id="mobile-navigation"
         className={`
-        fixed top-0 left-0 h-full w-64 bg-black border-r border-gray-800 z-50
+        fixed top-0 left-0 h-full w-64 bg-white border-r border-gray-200 z-50
         transform transition-transform duration-300 ease-in-out
         ${isMobileMenuOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}
         `}
@@ -90,18 +90,19 @@ const Navigation: React.FC<NavigationProps> = ({
         onKeyDown={handleKeyDown}
       >
         <div 
-          className="p-6 border-b border-gray-800"
+          className="p-6 border-b border-gray-200"
           tabIndex={-1}
         >
           <div className="flex items-center space-x-3">
             <img 
-              src="https://assets.oneweb.mercedes-benz.com/plugin/hp-assets/latest/images/brands/mercedes-benz/logo.svg" 
+              src="https://assets.oneweb.mercedes-benz.com/plugin/hp-assets/latest/images/brands/mercedes-benz/logo.svg"
               alt="Mercedes-Benz Logo" 
               className="w-8 h-8"
+              style={{filter: 'brightness(0)'}}
             />
             <div>
-              <h2 className="text-lg font-light tracking-wide">Mercedes-Benz</h2>
-              <p className="text-xs text-gray-400 uppercase tracking-widest">BrandOS</p>
+              <h2 className="text-lg font-light tracking-wide text-gray-900">Mercedes-Benz</h2>
+              <p className="text-xs text-gray-600 uppercase tracking-widest">BrandOS</p>
             </div>
           </div>
         </div>

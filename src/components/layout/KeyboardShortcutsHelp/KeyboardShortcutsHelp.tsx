@@ -55,7 +55,7 @@ const KeyboardShortcutsHelp: React.FC = () => {
       {/* Help trigger button */}
       <button
         onClick={toggleHelp}
-        className="fixed bottom-4 right-4 z-50 bg-gray-800 hover:bg-gray-700 text-white p-3 rounded-full shadow-lg focus:outline-none focus:ring-2 focus:ring-white transition-colors"
+        className="fixed bottom-4 right-4 z-50 bg-gray-900 hover:bg-gray-800 text-white p-3 rounded-full shadow-lg focus:outline-none focus:ring-2 focus:ring-gray-900 transition-colors"
         aria-label="Show keyboard shortcuts help"
         title="Keyboard shortcuts (Ctrl+?)"
       >
@@ -65,11 +65,11 @@ const KeyboardShortcutsHelp: React.FC = () => {
       {/* Help modal */}
       {isOpen && (
         <div
-          className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4"
+          className="fixed inset-0 bg-gray-900 bg-opacity-50 z-50 flex items-center justify-center p-4"
           onClick={() => setIsOpen(false)}
         >
           <div
-            className="bg-gray-900 rounded-lg max-w-2xl w-full max-h-[80vh] overflow-y-auto"
+            className="bg-white rounded-lg max-w-2xl w-full max-h-[80vh] overflow-y-auto border border-gray-200 shadow-lg"
             onClick={(e) => e.stopPropagation()}
             role="dialog"
             aria-labelledby="shortcuts-title"
@@ -77,12 +77,12 @@ const KeyboardShortcutsHelp: React.FC = () => {
           >
             <div className="p-6">
               <div className="flex items-center justify-between mb-6">
-                <h2 id="shortcuts-title" className="text-2xl font-light">
+                <h2 id="shortcuts-title" className="text-2xl font-light text-gray-900">
                   Keyboard Shortcuts
                 </h2>
                 <button
                   onClick={() => setIsOpen(false)}
-                  className="text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded"
+                  className="text-gray-600 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-900 rounded"
                   aria-label="Close shortcuts help"
                 >
                   <X size={24} />
@@ -92,14 +92,14 @@ const KeyboardShortcutsHelp: React.FC = () => {
               <div className="space-y-6">
                 {Object.entries(groupedShortcuts).map(([category, shortcuts]) => (
                   <div key={category}>
-                    <h3 className="text-lg font-medium mb-3 text-gray-300">
+                    <h3 className="text-lg font-medium mb-3 text-gray-800">
                       {category}
                     </h3>
                     <div className="space-y-2">
                       {shortcuts.map((shortcut, index) => (
-                        <div key={index} className="flex items-center justify-between py-2 px-3 bg-gray-800 rounded">
-                          <span className="text-gray-300">{shortcut.description}</span>
-                          <kbd className="px-2 py-1 text-xs font-mono bg-black text-white rounded border border-gray-600">
+                        <div key={index} className="flex items-center justify-between py-2 px-3 bg-gray-50 rounded">
+                          <span className="text-gray-700">{shortcut.description}</span>
+                          <kbd className="px-2 py-1 text-xs font-mono bg-white text-gray-900 rounded border border-gray-300">
                             {shortcut.key}
                           </kbd>
                         </div>
@@ -109,8 +109,8 @@ const KeyboardShortcutsHelp: React.FC = () => {
                 ))}
               </div>
 
-              <div className="mt-6 pt-4 border-t border-gray-700 text-sm text-gray-400">
-                <p>Press <kbd className="px-1 py-0.5 bg-black rounded text-xs">Ctrl+?</kbd> to toggle this help</p>
+              <div className="mt-6 pt-4 border-t border-gray-200 text-sm text-gray-600">
+                <p>Press <kbd className="px-1 py-0.5 bg-gray-100 rounded text-xs border border-gray-300">Ctrl+?</kbd> to toggle this help</p>
               </div>
             </div>
           </div>
